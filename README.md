@@ -9,6 +9,7 @@ This is a small Bash script that installs and configures `Neovim` and `Tmux` wit
 ```bash
 git clone https://github.com/Arunachalam-1435/Workspace.git
 chmod u+x setup.sh
+cd Worspace/
 ./setup.sh
 ```
 
