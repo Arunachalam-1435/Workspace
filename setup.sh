@@ -9,7 +9,7 @@ RESET="\033[0m"
 echo -e "${GREEN}${MAGNETA_BG}********************Updating System********************${RESET}"
 sudo apt update && sudo apt upgrade -y
 echo -e "${GREEN}${MAGNETA_BG}********************Installing Dependencies********************${RESET}"
-sudo apt install git curl ripgrep -y
+sudo apt install curl ripgrep -y
 echo -e "${GREEN}${MAGNETA_BG}********************Installing Neovim********************${RESET}"
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
 chmod u+x nvim-linux-x86_64.appimage

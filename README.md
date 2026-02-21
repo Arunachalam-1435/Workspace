@@ -23,7 +23,7 @@ tmux
 For `Tmux`
 ## 🧐How this script works
 1. This script first update and upgrade your system packages.
-2. Next it downloads dependencies like `git`, `curl`, & `ripgrep` for `Neovim` installation.
+2. Next it downloads dependencies like  `curl` & `ripgrep` for `Neovim` installation.
 3. Then it downloads and install `Neovim` as an `appimage` file (Because `Telescope` plugin in `Neovim` wants a latest version `>0.10.4`. But Debian package repos contain old version), move into `/opt/nvim/` directory and create a `symlink` on `/usr/local/bin/` directory. 
 4. Because an `appimage` is a self-contained executable bundle. Usually third party applications put on `/opt` directory. So i followed the Linux Filesystem Hierarchy Standard (FHS). 
 5. Also if `Neovim` releases a new version you manually keep multiple versions inside `/opt/nvim/` directory and switch between them by repointing the `symlink`. If you dump everything on `/usr/local/bin`, version management becomes messy.
@@ -52,6 +52,7 @@ For `Tmux`
 | `Leader+gs`    | Telescope git status                                                                                                                                                  |
 | `Leader+ft`    | Telescope colorscheme. I add feature to preview the colorscheme when you move colorschemes.                                                                           |
 | `Leader+fa`    | Telescope find files but you can find hidden directories and files                                                                                                    |
+**Note**:
 `Leaderkey` is `\`.
 ## Tmux Key bindings
 | Key bindings  | Usage                    |
@@ -61,6 +62,7 @@ For `Tmux`
 | `Leaderkey+j` | Select below pane        |
 | `Leaderkey+k` | Select top pane          |
 | `Leaderkey+l` | Select right pane        |
+**Note**:
 `Leaderkey` is `Ctrl+Space`.
 ## 🤔How & Why I make this script
 I saw some YouTube videos to setup the `Neovim` and `Tmux` manually in my `Lubuntu vm`. But I thought, **What if I want this setup in any new fresh installation of Ubuntu or Debian based distros**. Manually doing it takes lot of time. So simply automate it, is a very easy task to get our own custom development workspace in any machine.
