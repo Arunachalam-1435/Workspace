@@ -1,5 +1,5 @@
 ## Introduction
-This is small Bash script that installs and configures `Neovim` and `Tmux` with some simple customization plugins. It is very useful for people who want to setup `Neovim` and `Tmux` in a single command, without getting any weird error and configuration mistakes. Now we see how the script works and what are the plugins it install and configure in your machine.
+This is a small Bash script that installs and configures `Neovim` and `Tmux` with some simple customization plugins. It is very useful for people who want to setup `Neovim` and `Tmux` in a single command, without getting any weird error and configuration mistakes. Now we see how the script works and what are the plugins it install and configure in your machine.
 ## ⚠️Before running the script
 1. This script only runs on `Debian` based distros, because it use `APT` package manager. 
 2. This script runs only downloads and setup `Neovim` for `X64` based systems. Not `ARM` based machines.
@@ -7,9 +7,9 @@ This is small Bash script that installs and configures `Neovim` and `Tmux` with 
 4. Make sure you don't have existing `Neovim` and `Tmux` installation. If you have it, this script will over write the existing configuration. So backingup the existing configuration is mandatory.
 ## ▶️To run this script
 ```bash
-git clone <repo_url>
+git clone https://github.com/Arunachalam-1435/Workspace.git
 chmod u+x setup.sh
-./script.sh
+./setup.sh
 ```
 
 Then test the installations using,
@@ -24,7 +24,7 @@ For `Tmux`
 ## 🧐How this script works
 1. This script first update and upgrade your system packages.
 2. Next it downloads dependencies like `git`, `curl`, & `ripgrep` for `Neovim` installation.
-3. Then it downloads and install `Neovim` as an `appimage` file (Because `Telescope` plugin in `Neovim` wants a latest version `>0.10.4`. But Debian package repos contain old version), move into `/opt/nvim` directory and create a `symlink` on `/usr/local/bin/nvim` directory. 
+3. Then it downloads and install `Neovim` as an `appimage` file (Because `Telescope` plugin in `Neovim` wants a latest version `>0.10.4`. But Debian package repos contain old version), move into `/opt/nvim/` directory and create a `symlink` on `/usr/local/bin/` directory. 
 4. Because an `appimage` is a self-contained executable bundle. Usually third party applications put on `/opt` directory. So i followed the Linux Filesystem Hierarchy Standard (FHS). 
 5. Also if `Neovim` releases a new version you manually keep multiple versions inside `/opt/nvim/` directory and switch between them by repointing the `symlink`. If you dump everything on `/usr/local/bin`, version management becomes messy.
 6. Then it install `Tmux` using `APT` package manager.
