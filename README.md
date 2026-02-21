@@ -8,8 +8,8 @@ This is a small Bash script that installs and configures `Neovim` and `Tmux` wit
 ## ▶️To run this script
 ```bash
 git clone https://github.com/Arunachalam-1435/Workspace.git
+cd Workspace/
 chmod u+x setup.sh
-cd Worspace/
 ./setup.sh
 ```
 
