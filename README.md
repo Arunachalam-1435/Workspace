@@ -1,3 +1,4 @@
+## Introduction
 This is small Bash script that installs and configures `Neovim` and `Tmux` with some simple customization plugins. It is very useful for people who want to setup `Neovim` and `Tmux` in a single command, without getting any weird error and configuration mistakes. Now we see how the script works and what are the plugins it install and configure in your machine.
 ## ⚠️Before running the script
 1. This script only runs on `Debian` based distros, because it use `APT` package manager. 
